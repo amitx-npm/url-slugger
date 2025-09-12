@@ -1,0 +1,75 @@
+{
+  "name": "url-slugger",
+  "version": "1.0.0",
+  "description": "Lightweight, dependency-free utility to convert strings to URL-friendly slugs with advanced customization options.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs --clean",
+    "clean": "rimraf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky",
+    "release:check": "npm run build && npm run test && npm run lint",
+    "release": "standard-version"
+  },
+  "keywords": [
+    "slug",
+    "slugify",
+    "url",
+    "seo",
+    "string",
+    "converter",
+    "utility",
+    "lightweight",
+    "zero-dependencies"
+  ],
+  "author": "Amit <amitx>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitx-npm/url-slugger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amitx-npm/url-slugger/issues"
+  },
+  "homepage": "https://github.com/amitx-npm/url-slugger#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@types/node": "^24.3.1",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
+    "standard-version": "^9.5.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {}
+}
