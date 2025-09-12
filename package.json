@@ -27,8 +27,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky",
-    "release:check": "npm run build && npm run test && npm run lint",
-    "release": "standard-version"
+    "release:check": "npm run build && npm run test && npm run lint"
   },
   "keywords": [
     "slug",
@@ -57,6 +56,12 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
     "@types/node": "^24.3.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
@@ -66,7 +71,7 @@
     "husky": "^9.1.6",
     "prettier": "^3.3.3",
     "rimraf": "^5.0.10",
-    "standard-version": "^9.5.0",
+    "semantic-release": "^22.0.12",
     "tsup": "^8.2.4",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
