@@ -1,9 +1,8 @@
 ## [1.0.1](https://github.com/amitx-npm/url-slugger/compare/v1.0.0...v1.0.1) (2025-09-13)
 
-
 ### Bug Fixes
 
-* format examples.ts file to pass prettier checks ([880da42](https://github.com/amitx-npm/url-slugger/commit/880da42c81a8c6205dad7951aedef093972c1bae))
+- format examples.ts file to pass prettier checks ([880da42](https://github.com/amitx-npm/url-slugger/commit/880da42c81a8c6205dad7951aedef093972c1bae))
 
 # Changelog
 
