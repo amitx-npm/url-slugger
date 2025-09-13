@@ -1,6 +1,6 @@
 {
   "name": "url-slugger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lightweight, dependency-free utility to convert strings to URL-friendly slugs with advanced customization options.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
