@@ -1,6 +1,6 @@
 /**
  * TypeScript Examples for url-slugger
- * 
+ *
  * This file demonstrates various usage patterns and TypeScript integration
  * for the url-slugger package.
  */
@@ -17,12 +17,7 @@ console.log(slugify('Price: $29.99')); // 'price-dollar29-99'
 console.log('\n=== TypeScript Type Safety ===');
 
 // Valid inputs
-const validInputs: SlugifyInput[] = [
-  'Hello World',
-  123,
-  null,
-  undefined,
-];
+const validInputs: SlugifyInput[] = ['Hello World', 123, null, undefined];
 
 validInputs.forEach((input) => {
   console.log(`Input: ${input} -> Output: ${slugify(input)}`);
@@ -145,13 +140,13 @@ console.log('\n=== Performance Test ===');
 const performanceTest = () => {
   const testString = 'Hello World with special chars !@#$%^&*()';
   const iterations = 10000;
-  
+
   const start = performance.now();
   for (let i = 0; i < iterations; i++) {
     slugify(testString);
   }
   const end = performance.now();
-  
+
   const avgTime = (end - start) / iterations;
   console.log(`Processed ${iterations} slugs in ${(end - start).toFixed(2)}ms`);
   console.log(`Average time per slug: ${avgTime.toFixed(4)}ms`);
@@ -185,11 +180,9 @@ const blogPosts: BlogPost[] = [
   { id: 3, title: 'Node.js Best Practices', author: 'Bob Johnson' },
 ];
 
-const processedPosts = processItems(
-  blogPosts,
-  (post) => post.title,
-  { maxLength: 30 }
-);
+const processedPosts = processItems(blogPosts, (post) => post.title, {
+  maxLength: 30,
+});
 
 processedPosts.forEach(({ item, slug }) => {
   console.log(`Post: "${item.title}" -> Slug: "${slug}"`);
@@ -228,7 +221,9 @@ const urlGen = new UrlGenerator('https://example.com', {
 console.log(urlGen.generateUrl('About Us & Contact Information'));
 // https://example.com/about-us-and-contact-information
 
-console.log(urlGen.generateProductUrl('MacBook Pro 16"', 'Laptops & Computers', 12345));
+console.log(
+  urlGen.generateProductUrl('MacBook Pro 16"', 'Laptops & Computers', 12345)
+);
 // https://example.com/laptops-and-computers/macbook-pro-16-12345
 
 console.log('\n=== Examples Complete ===');
